@@ -37,6 +37,29 @@
     </div>
   </div>
 
+  <script>
+    function generateTable() {
+      let number = document.getElementById('table').value;
+      let limit = document.getElementById('limit').value;
+      let tableHTML = `<table><tr><th> Number </th><th> Result </th></tr>`;
+
+      if (number < 20) {
+        for (var i = limit; i >= 1; i--) {
+          tableHTML += "<tr><td>" + number + " x " + i + "</td><td>" + (number * i) + "</td></tr>";
+        }
+      } else {
+        for (var i = 1; i <= limit; i++) {
+          tableHTML += "<tr><td>" + number + " x " + i + "</td><td>" + (number * i) + "</td></tr>";
+        }
+      }
+
+      tableHTML += "</table>";
+      document.querySelector('.printTable').innerHTML = tableHTML;
+    }
+
+    // generateTable();
+  </script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
@@ -47,7 +70,7 @@
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script> -->
 
-  <script src="/JavaScript/JS Files/Assignment 01.js" type="text/javascript"></script>
+  <!-- <script src="/JavaScript/JS Files/Assignment 01.js" type="text/javascript"></script> -->
 </body>
 
 </html>
