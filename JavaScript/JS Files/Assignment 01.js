@@ -1,7 +1,7 @@
 function generateTable() {
-  var number = document.getElementById('table').value;
-  var limit = document.getElementById('limit').value;
-  var tableHTML = `<table><tr><th> Number </th><th> Result </th></tr>`;
+  let number = document.getElementById('table').value;
+  let limit = document.getElementById('limit').value;
+  let tableHTML = `<table><tr><th> Number </th><th> Result </th></tr>`;
 
   if (number < 20) {
       for (var i = limit; i >= 1; i--) {
