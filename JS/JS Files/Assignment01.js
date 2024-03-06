@@ -17,4 +17,7 @@ function generateTable() {
   document.querySelector('.printTable').innerHTML = tableHTML;
 }
 
+let btn = document.getElementById('button1');
+btn.onclick = generateTable;
+
 // generateTable();
